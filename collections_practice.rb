@@ -14,3 +14,13 @@ def contain_a(array)
   end
   new_array
 end
+
+def contain_a(array)
+  new_array = []
+  array.collect do |element|
+    if element.include?("a")
+      new_array << element
+    end
+  end
+  new_array
+end
