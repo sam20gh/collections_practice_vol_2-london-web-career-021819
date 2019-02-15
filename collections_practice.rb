@@ -21,4 +21,6 @@ end
 
 
 def remove_non_string(array)
+  
+  array.delete_if{|item| item != item.to_s}
 end
