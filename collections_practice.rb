@@ -21,11 +21,11 @@ end
 
 
 def remove_non_string(array)
-  
- array.delete_if { |obj| !(obj.is_a? String) }
+array.grep(String)
 end
 
 
 def count_elements(array)
- array.grep(String)
+ array.group_by(&:itself)                
+ .map{|k, v| k.merge(count: v.length)}
 end
