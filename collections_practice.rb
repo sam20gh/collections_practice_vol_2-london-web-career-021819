@@ -22,7 +22,7 @@ end
 
 def remove_non_strings(array)
 array.grep(String)
-# objects.select { |obj| Integer === obj }
+# array.select { |obj| Integer === obj }
 end
 
 
