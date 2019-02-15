@@ -16,7 +16,7 @@ def contain_a(array)
 end
 
 def first_wa(array)
-  array.each do |element|
-   element.start_with?('wa')
+  array.each do |el|
+   el.start_with?('wa')
   end
 end
