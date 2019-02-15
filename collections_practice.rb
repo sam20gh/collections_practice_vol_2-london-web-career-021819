@@ -21,7 +21,10 @@ end
 
 
 def remove_non_string(array)
-array.grep(String)
+ array.delete_if do |el|
+    el.class != String
+  end
+  array
 end
 
 
