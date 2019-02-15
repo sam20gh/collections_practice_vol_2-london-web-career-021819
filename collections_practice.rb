@@ -69,8 +69,8 @@ end
 
 
 def organize_schools(schools)
-schoollist= {}
- schools.each do |school, data|
+  answer = Hash.new
+  schools.each do |school, data|
     data.each do |key, value|
       if key == :location
         !answer.keys.include?(value) ? answer[value] = [school] : answer[value] << school
