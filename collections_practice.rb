@@ -69,15 +69,13 @@ end
 
 
 def organize_schools(schools)
-  schoollist= {}
-  schools.each do |key, location_hash|
-    location_hash.each do |k, location|
-      if !output.has_key?(location)
-        output[location] = [key]
-      elsif output.has_key?(location)
-        output[location] << key
+schoollist= {}
+ schools.each do |school, data|
+    data.each do |key, value|
+      if key == :location
+        !answer.keys.include?(value) ? answer[value] = [school] : answer[value] << school
       end
     end
   end
-  output
+  answer
 end
