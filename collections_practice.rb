@@ -30,3 +30,20 @@ def count_elements(array)
  array.group_by(&:itself)                
  .map{|k, v| k.merge(count: v.length)}
 end
+
+
+
+def merge_data(keys, data)
+  i = 0
+  while i < keys.length
+    data.each do |element|
+      element.each do |k, v|
+        if keys[i].has_value?(k)
+          keys[i].merge!(v)
+        end
+      end
+    end
+  i+=1
+  end
+  return keys
+end
