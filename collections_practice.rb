@@ -17,9 +17,6 @@ end
 
 def first_wa(array)
   array.each do |element|
-    if element.include?("a")
-      new_array << element
-    end
+   element.start_with?("wa")
   end
-  new_array
 end
